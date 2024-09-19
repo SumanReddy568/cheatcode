@@ -1,0 +1,23 @@
+window.jestCommands = [
+    { command: 'jest', description: 'Runs all tests in the current directory and its subdirectories' },
+    { command: 'jest <file>', description: 'Runs tests in the specified file' },
+    { command: 'jest <directory>', description: 'Runs tests in the specified directory' },
+    { command: 'jest --watch', description: 'Runs tests in watch mode, re-running tests when files change' },
+    { command: 'jest --watchAll', description: 'Runs all tests in watch mode' },
+    { command: 'jest --coverage', description: 'Generates a code coverage report' },
+    { command: 'jest --clearCache', description: 'Clears Jest’s cache' },
+    { command: 'jest --verbose', description: 'Displays detailed information about each test' },
+    { command: 'jest --silent', description: 'Suppresses all output except test results' },
+    { command: 'jest --bail', description: 'Stops running tests after the first failure' },
+    { command: 'jest --maxWorkers=<num>', description: 'Specifies the maximum number of worker processes to use' },
+    { command: 'jest --runInBand', description: 'Runs tests serially in the same process' },
+    { command: 'jest --testNamePattern=<pattern>', description: 'Runs tests with names that match the specified pattern' },
+    { command: 'jest --testPathPattern=<pattern>', description: 'Runs tests in files that match the specified pattern' },
+    { command: 'jest --testEnvironment=<environment>', description: 'Specifies the test environment (e.g., jsdom, node)' },
+    { command: 'jest --setupFiles=<files>', description: 'Runs specified setup files before each test suite' },
+    { command: 'jest --globalSetup=<file>', description: 'Runs a global setup script before all test suites' },
+    { command: 'jest --globalTeardown=<file>', description: 'Runs a global teardown script after all test suites' },
+    { command: 'jest --snapshotUpdate', description: 'Updates snapshot tests' },
+    { command: 'jest --no-cache', description: 'Disables Jest’s cache' },
+    { command: 'jest --help', description: 'Displays help information and usage for Jest commands' }
+];

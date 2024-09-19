@@ -10,58 +10,58 @@ body {
 
 /* Header Bar Styles */
 .header-bar {
-    background-color: #1e1e1e; /* Keep the header background dark */
+    background-color: #1e1e1e;
     color: #61dafb;
-    padding: 10px 20px; /* Adjust padding for better responsiveness */
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Space between title and social icons */
-    align-items: center; /* Center items vertically */
-    position: fixed; /* Fix header at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure header is above other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Header Title */
 .header-bar h1 {
     margin: 0;
-    font-size: 1.5rem; /* Adjust font size relative to viewport */
+    font-size: 1.5rem;
 }
 
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 10px; /* Space between icons */
+    align-items: center;
+    gap: 10px;
 }
 
 .social-icons a {
     display: flex;
-    align-items: center; /* Center icons vertically */
-    color: #ffffff; /* Ensure icons are visible against the dark background */
-    transition: color 0.3s; /* Smooth color transition on hover */
+    align-items: center;
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
 .social-icons img {
-    width: 2rem; /* Adjust icon size relative to font size */
-    height: 2rem; /* Maintain aspect ratio */
+    width: 2rem;
+    height: 2rem;
 }
 
-/* Social Icons Hover Effects */
 .social-icons a:hover img {
-    opacity: 0.8; /* Slightly reduce opacity on hover */
+    opacity: 0.8;
 }
 
 .social-icons a:hover {
-    color: #61dafb; /* Change icon color on hover */
+    color: #61dafb;
 }
 
 /* Container Styles */
 .container {
     display: flex;
     min-height: 100vh;
-    padding-top: 60px; /* Adjusts automatically based on the header height */
+    padding-top: 60px;
     margin: 0;
 }
 
@@ -73,12 +73,12 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure the footer stays at the bottom */
-    height: calc(100vh - 60px); /* Full height minus header */
-    position: fixed; /* Fix sidebar on the left */
-    top: 60px; /* Align below header */
-    left: 0; /* Align to the left */
-    overflow-y: auto; /* Auto hide scrollbar */
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow-y: auto;
 }
 
 /* Sidebar Title */
@@ -86,7 +86,7 @@ body {
     color: #61dafb;
     margin: 0 0 20px 0;
     text-align: center;
-    font-size: 1.5rem; /* Adjust font size relative to viewport */
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -105,7 +105,7 @@ ul li {
     margin: 15px 0;
     padding: 10px;
     cursor: pointer;
-    font-size: 1.1rem; /* Adjust font size relative to viewport */
+    font-size: 1.1rem;
     transition: background-color 0.3s;
     border-radius: 5px;
     width: 100%;
@@ -123,26 +123,26 @@ ul li:hover {
 .sidebar-footer {
     margin-top: auto;
     text-align: center;
-    font-size: 0.9rem; /* Adjust font size relative to viewport */
+    font-size: 0.9rem;
     color: #a9a9a9;
 }
 
 /* Content Area Styles */
 .content {
     background-color: #20232a;
-    width: calc(100% - 20%); /* Adjust width considering sidebar */
+    width: calc(100% - 20%);
     padding: 20px;
-    margin-left: 20%; /* Ensure content starts after sidebar */
-    height: calc(100vh - 60px); /* Full height minus header */
-    overflow: auto; /* Auto hide scrollbar */
-    padding-top: 0; /* Remove extra padding for proper alignment */
+    margin-left: 20%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+    padding-top: 0;
 }
 
 /* Command Block Styles */
 .command-block {
     background-color: #282c34;
     padding: 15px;
-    margin: 0 0 20px 0; /* Remove any top margin to align with header */
+    margin: 0 0 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -152,7 +152,6 @@ ul li:hover {
     flex-wrap: wrap;
 }
 
-/* Ensure command blocks don’t overflow */
 .command-block pre {
     margin: 0;
     padding: 10px;
@@ -172,15 +171,35 @@ ul li:hover {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 0.9rem; /* Adjust font size relative to viewport */
+    font-size: 0.9rem;
     position: absolute;
     top: 50%;
-    right: 20px; /* Adjust to be more centered */
+    right: 20px;
     transform: translateY(-50%);
 }
 
 .copy-btn:hover {
     background-color: #21a1f1;
+}
+
+/* Follow Button Styles */
+.follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    border-radius: 16px;
+    background-color: #0A66C2;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'SF Pro Text', Helvetica, sans-serif;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.follow-button:hover {
+    background-color: #004182;
 }
 
 /* Toast Notification */
@@ -213,51 +232,30 @@ ul li:hover {
     }
 }
 
-/* Header Bar Styles */
-.header-bar {
-    background-color: #1e1e1e; /* Keep the header background dark */
-    color: #61dafb;
-    padding: 10px 20px; /* Adjust padding for better responsiveness */
-    display: flex;
-    justify-content: space-between; /* Space between title and social icons */
-    align-items: center; /* Center items vertically */
-    position: fixed; /* Fix header at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure header is above other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+/* Remove focus outline for buttons */
+button:focus,
+.copy-btn:focus,
+.follow-button:focus {
+    outline: none; /* Removes the default focus outline */
 }
 
-/* Social Icons */
-.social-icons {
-    display: flex;
-    align-items: center; /* Center icons vertically */
-    gap: 10px; /* Space between icons and button */
-}
-
-/* Social Icons Images */
-.social-icons img {
-    width: 2rem; /* Adjust icon size relative to font size */
-    height: 2rem; /* Maintain aspect ratio */
-}
-
-/* Follow Button Styles */
+/* Ensure smooth cursor behavior for buttons */
+button,
+.copy-btn,
 .follow-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px 15px;
-    border-radius: 16px;
-    background-color: #0A66C2; /* LinkedIn color */
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'SF Pro Text', Helvetica, sans-serif;
-    font-size: 0.9rem; /* Adjust font size relative to viewport */
-    margin-left: 10px;
-    transition: background-color 0.3s;
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    user-select: none; /* Prevent text selection on click */
 }
 
-.follow-button:hover {
-    background-color: #004182; /* Darker LinkedIn color on hover */
+/* Optional: Add a subtle transition to buttons */
+button,
+.copy-btn,
+.follow-button {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+/* Ensure no blinking or text selection on focus */
+button:focus {
+    outline: none; /* Removes default focus outline */
+    box-shadow: none; /* Remove box-shadow if any */
 }

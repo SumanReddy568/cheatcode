@@ -1,0 +1,21 @@
+window.mochaCommands = [
+    { command: 'mocha', description: 'Runs all tests in the current directory and its subdirectories' },
+    { command: 'mocha <file>', description: 'Runs tests in the specified file' },
+    { command: 'mocha <directory>', description: 'Runs tests in the specified directory' },
+    { command: 'mocha --reporter <reporter>', description: 'Specifies a reporter to use for output (e.g., spec, dot, nyan)' },
+    { command: 'mocha --grep <pattern>', description: 'Runs tests that match the specified pattern' },
+    { command: 'mocha --invert', description: 'Inverts the matching of the pattern specified with --grep' },
+    { command: 'mocha --timeout <milliseconds>', description: 'Sets the test case timeout in milliseconds' },
+    { command: 'mocha --slow <milliseconds>', description: 'Specifies the threshold for slow tests' },
+    { command: 'mocha --bail', description: 'Stops running tests after the first failure' },
+    { command: 'mocha --reporter <reporter> --reporter-options <options>', description: 'Uses a specific reporter with custom options' },
+    { command: 'mocha --require <module>', description: 'Pre-loads a module before running tests' },
+    { command: 'mocha --compilers <compilers>', description: 'Compiles code before running tests (e.g., Babel)' },
+    { command: 'mocha --no-color', description: 'Disables color in the output' },
+    { command: 'mocha --full-trace', description: 'Shows full stack traces for errors' },
+    { command: 'mocha --no-exit', description: 'Prevents Mocha from exiting with a non-zero status code' },
+    { command: 'mocha --watch', description: 'Watches files for changes and reruns tests automatically' },
+    { command: 'mocha --check-leaks', description: 'Checks for global variable leaks' },
+    { command: 'mocha --globals <globals>', description: 'Specifies global variables that should not be checked for leaks' },
+    { command: 'mocha --help', description: 'Displays help information and usage for Mocha commands' }
+];

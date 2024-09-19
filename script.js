@@ -8,10 +8,23 @@ document.body.appendChild(toast);
 
 // Define technologies and their corresponding command files
 const technologies = {
-    html: 'HTML',
-    css: 'CSS',
-    js: 'JavaScript',
-    git: 'Git'
+    aws: 'AWS CLI',
+    kubernetes: 'K8S',
+    docker: 'DOCKER',
+    linux: 'LINUX',
+    bash: 'BASH',
+    networking: 'NETWORKING',
+    javascript: 'JAVA SCRIPT',
+    python: 'PYTHON',
+    java: 'JAVA',
+    ruby: 'RUBY',
+    dockerswarm: 'DOCKER SWARM',
+    pytest: 'PYTEST',
+    mocha: 'MOCHA',
+    jest: 'JEST',
+    nightwatch: 'NIGHTWATCH JS',
+    pactum: 'PACTUM JS'
+
 };
 
 // Load default (first) technology on page load
