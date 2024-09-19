@@ -1,0 +1,23 @@
+window.terraformCommands = [
+    { command: 'terraform init', description: 'Initializes a new or existing Terraform configuration' },
+    { command: 'terraform plan', description: 'Generates and displays an execution plan' },
+    { command: 'terraform apply', description: 'Applies the changes required to reach the desired state of the configuration' },
+    { command: 'terraform destroy', description: 'Destroys all infrastructure managed by the configuration' },
+    { command: 'terraform validate', description: 'Validates the configuration files' },
+    { command: 'terraform fmt', description: 'Formats the configuration files to a canonical format' },
+    { command: 'terraform state list', description: 'Lists resources in the Terraform state' },
+    { command: 'terraform state show <resource>', description: 'Shows detailed information about a resource in the state' },
+    { command: 'terraform refresh', description: 'Updates the state file with real infrastructure information' },
+    { command: 'terraform output', description: 'Displays outputs from the last applied plan' },
+    { command: 'terraform taint <resource>', description: 'Marks a resource for recreation during the next apply' },
+    { command: 'terraform untaint <resource>', description: 'Removes the taint from a resource' },
+    { command: 'terraform graph', description: 'Generates a visual representation of the infrastructure resources' },
+    { command: 'terraform import <resource> <id>', description: 'Imports an existing resource into the Terraform state' },
+    { command: 'terraform workspace list', description: 'Lists all workspaces' },
+    { command: 'terraform workspace select <workspace>', description: 'Switches to the specified workspace' },
+    { command: 'terraform show', description: 'Displays the Terraform state or plan' },
+    { command: 'terraform version', description: 'Displays the version of Terraform' },
+    { command: 'terraform providers', description: 'Lists all the providers used in the configuration' },
+    { command: 'terraform plan -out=<file>', description: 'Saves the generated execution plan to a file' },
+    { command: 'terraform apply <file>', description: 'Applies the changes specified in the execution plan file' }
+];
