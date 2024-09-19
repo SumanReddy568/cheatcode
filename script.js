@@ -23,8 +23,12 @@ const technologies = {
     mocha: 'MOCHA',
     jest: 'JEST',
     nightwatch: 'NIGHTWATCH JS',
-    pactum: 'PACTUM JS'
-
+    pactum: 'PACTUM JS',
+    selenium: 'SELENIUM',
+    cypress: 'CYPRESS',
+    git: 'GIT',
+    ansible: 'ANSIBLE',
+    terraform: 'TERRAFORM',
 };
 
 // Load default (first) technology on page load
