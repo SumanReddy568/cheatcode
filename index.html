@@ -17,7 +17,13 @@
 </head>
 <body>
     <!-- Header Bar -->
+    <div id="loader" class="spinner"></div>
     <header class="header-bar">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <script src="theme-toggle.js"></script>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/sumanreddy568/" target="_blank">
                 <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
@@ -35,6 +41,12 @@
                 Follow on LinkedIn
             </a>
         </div>
+
+        <!-- Google Search Bar -->
+        <form action="https://www.google.com/search" method="get" class="search-form">
+            <input type="text" name="q" placeholder="Search Google..." required>
+            <button type="submit">Search</button>
+        </form>
     </header>
 
     <div class="container">

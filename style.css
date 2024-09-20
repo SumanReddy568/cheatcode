@@ -12,12 +12,12 @@ body {
 .header-bar {
     background-color: #1e1e1e;
     color: #61dafb;
-    padding: 10px 20px;
+    padding: 12px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 100%;
+    width: 99%;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -35,6 +35,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: -10px; /* Adjust this value to move icons further left */
 }
 
 .social-icons a {
@@ -296,4 +297,222 @@ button:focus {
         width: 100%; /* Full width on mobile */
         margin-left: 0; /* Remove left margin */
     }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* Light Mode Styles */
+.light-mode body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode .header-bar {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.light-mode .sidebar {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+.light-mode ul li {
+    background-color: #dcdcdc;
+    color: #000000;
+}
+
+.light-mode ul li:hover {
+    background-color: #a0a0a0;
+    color: #050505;
+}
+
+.light-mode .content {
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+.light-mode .command-block {
+    background-color: #f0f0f0;
+}
+
+.light-mode .copy-btn {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.light-mode .slider {
+    --background: #000000;
+}
+
+/* Dark Mode styles */
+.dark-mode body {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.dark-mode .header-bar {
+    background-color: #1e1e1e;
+    color: #61dafb;
+}
+
+.dark-mode .sidebar {
+    background-color: #282c34;
+}
+
+.dark-mode ul li {
+    background-color: #2d2d2d;
+}
+
+.dark-mode ul li:hover {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+.dark-mode .content {
+    background-color: #20232a;
+}
+
+.dark-mode .command-block {
+    background-color: #282c34;
+}
+
+.dark-mode .copy-btn {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+.dark-mode .slider {
+    --background: #fcfcfc;
+}
+
+/* Loader CSS */
+.spinner {
+    --size: 30px;
+    --first-block-clr: #005bba;
+    --second-block-clr: #fed500;
+    --clr: #111;
+    width: 100px;
+    height: 100px;
+    position: absolute;  /* Position relative to the viewport */
+    top: 50%;            /* Center vertically */
+    left: 50%;           /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Center the spinner */
+    z-index: 1000;      /* High z-index to appear on top of other elements */
+    margin: 0 auto;
+  }
+  
+  .spinner::after, .spinner::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    top: 50%;
+    animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+    left: 50%;
+    background: var(--first-block-clr);
+  }
+  
+  .spinner::after {
+    background: var(--second-block-clr);
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+    animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+  }
+  
+  
+  @keyframes down {
+    0%, 100% {
+      transform: none;
+    }
+    25% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(100%) translateY(100%);
+    }
+    75% {
+      transform: translateY(100%);
+    }
+  }
+  
+  @keyframes up {
+    0%, 100% {
+      transform: none;
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-100%) translateY(-100%);
+    }
+    75% {
+      transform: translateY(-100%);
+    }
+  }
+  .search-form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.search-form input {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
 }
