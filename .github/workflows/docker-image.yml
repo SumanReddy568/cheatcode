@@ -40,4 +40,5 @@ jobs:
       # Trigger the Render deploy hook
       - name: Trigger Render Deploy Hook
         run: |
-          curl -X POST "YOUR_RENDER_DEPLOY_HOOK_URL"
+          curl -X POST "https://api.render.com/deploy/srv-crmctvo8fa8c73aggprg?key=qxCeOA8toso"
+
