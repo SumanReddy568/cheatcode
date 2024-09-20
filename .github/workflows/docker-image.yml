@@ -36,3 +36,8 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/cheatcode
+
+      # Trigger the Render deploy hook
+      - name: Trigger Render Deploy Hook
+        run: |
+          curl -X POST "YOUR_RENDER_DEPLOY_HOOK_URL"
