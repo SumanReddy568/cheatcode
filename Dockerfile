@@ -8,13 +8,17 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy the static website files from the current directory to the container
-COPY index.html ./
-COPY style.css ./
-COPY script.js ./
+COPY index.html ./ 
+COPY style.css ./ 
+COPY script.js ./ 
 COPY commands/ ./commands/
 
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx server
+# Add a health check to verify if Nginx is running
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost/ || exit 1
+
+# Start Nginx server and run in the foreground to keep the container alive
 CMD ["nginx", "-g", "daemon off;"]
