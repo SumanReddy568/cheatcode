@@ -114,3 +114,19 @@ function showToast(message) {
         toast.classList.remove('show');
     }, 3000);  // Hide the toast after 3 seconds
 }
+
+window.onload = () => {
+    populateTechList();
+    const defaultTech = Object.keys(technologies)[0];
+    loadCommands(defaultTech);  // Load commands for the first technology
+
+    // Hide the loader and show the content after a delay or when content is ready
+    const loader = document.getElementById('loader');
+    const contentContainer = document.getElementById('content-container');
+
+    // Simulate a loading delay for demo purposes
+    setTimeout(() => {
+        loader.style.display = 'none';
+        contentContainer.style.display = 'block';
+    }, 2000);  // Adjust the delay time as needed
+};
