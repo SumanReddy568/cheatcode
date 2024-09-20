@@ -35,7 +35,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: -10px; /* Adjust this value to move icons further left */
+    margin-left: -0px; /* Adjust this value to move icons further left */
 }
 
 .social-icons a {
@@ -503,7 +503,7 @@ input:checked + .slider:before {
   }
   .search-form {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 100px;
 }
 
 .search-form input {
