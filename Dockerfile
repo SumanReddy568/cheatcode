@@ -1,21 +1,20 @@
-# Use the official Node.js image as the base
-FROM node:16-alpine
+# Use the official Nginx image from Docker Hub
+FROM nginx:alpine
 
-# Set the working directory inside the container
-WORKDIR /usr/src/app
+# Set the working directory to /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
-# Copy package.json and package-lock.json (if available) to install dependencies
-# You can create a package.json if needed for this project, or just copy the files
-COPY package*.json ./
+# Remove the default Nginx static files
+RUN rm -rf ./*
 
-# Install project dependencies
-RUN npm install
+# Copy the static website files from the current directory to the container
+COPY index.html ./
+COPY style.css ./
+COPY script.js ./
+COPY commands/ ./commands/
 
-# Copy all project files to the container's working directory
-COPY . .
+# Expose port 80
+EXPOSE 80
 
-# Expose the port your application will run on (if applicable)
-EXPOSE 8080
-
-# Start the script (update based on your project’s entry point)
-CMD ["node", "script.js"]
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
