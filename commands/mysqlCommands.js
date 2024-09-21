@@ -1,0 +1,22 @@
+window.mysqlCommands = [
+    { command: 'mysql', description: 'Start MySQL interactive terminal' },
+    { command: 'SHOW DATABASES;', description: 'List all databases' },
+    { command: 'USE <database>;', description: 'Switch to a specific database' },
+    { command: 'SHOW TABLES;', description: 'List all tables in the current database' },
+    { command: 'CREATE DATABASE <name>;', description: 'Create a new database' },
+    { command: 'DROP DATABASE <name>;', description: 'Delete a database' },
+    { command: 'CREATE USER \'<user>\'@\'localhost\' IDENTIFIED BY \'<password>\';', description: 'Create a new user' },
+    { command: 'GRANT ALL PRIVILEGES ON <database>.* TO \'<user>\'@\'localhost\';', description: 'Grant privileges to a user' },
+    { command: 'SHOW GRANTS FOR \'<user>\'@\'localhost\';', description: 'Show privileges for a user' },
+    { command: 'FLUSH PRIVILEGES;', description: 'Reload privileges' },
+    { command: 'SELECT * FROM <table>;', description: 'Query all rows from a table' },
+    { command: 'INSERT INTO <table> (columns) VALUES (values);', description: 'Insert data into a table' },
+    { command: 'UPDATE <table> SET <column>=<value> WHERE <condition>;', description: 'Update existing data' },
+    { command: 'DELETE FROM <table> WHERE <condition>;', description: 'Delete data from a table' },
+    { command: 'mysqldump <database> > backup.sql', description: 'Create a backup of the database' },
+    { command: 'mysql <database> < backup.sql', description: 'Restore database from a backup' },
+    { command: 'SHOW PROCESSLIST;', description: 'Show currently running queries' },
+    { command: 'SHOW VARIABLES LIKE \'%timeout%\';', description: 'Show MySQL timeout settings' },
+    { command: 'EXPLAIN <query>;', description: 'Analyze query execution' },
+    { command: 'EXIT;', description: 'Quit MySQL' }
+];

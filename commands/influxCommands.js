@@ -1,0 +1,20 @@
+window.influxCommands = [
+    { command: 'influx', description: 'Start InfluxDB interactive shell' },
+    { command: 'SHOW DATABASES;', description: 'List all databases' },
+    { command: 'CREATE DATABASE <name>;', description: 'Create a new database' },
+    { command: 'DROP DATABASE <name>;', description: 'Delete a database' },
+    { command: 'USE <database>;', description: 'Select a database to use' },
+    { command: 'SHOW MEASUREMENTS;', description: 'List all measurements in the current database' },
+    { command: 'SELECT * FROM <measurement>;', description: 'Query all data from a measurement' },
+    { command: 'INSERT INTO <measurement> <tags> <fields>;', description: 'Insert data into a measurement' },
+    { command: 'DELETE FROM <measurement> WHERE <condition>;', description: 'Delete data from a measurement' },
+    { command: 'CREATE RETENTION POLICY <name> ON <database> DURATION <duration> REPLICATION <count>;', description: 'Create a retention policy' },
+    { command: 'SHOW RETENTION POLICIES;', description: 'Show retention policies for the current database' },
+    { command: 'DROP RETENTION POLICY <name> ON <database>;', description: 'Delete a retention policy' },
+    { command: 'SHOW QUERIES;', description: 'Show currently running queries' },
+    { command: 'EXPLAIN <query>;', description: 'Explain a query execution plan' },
+    { command: 'EXIT;', description: 'Quit InfluxDB shell' },
+    { command: 'SHOW TAG KEYS FROM <measurement>;', description: 'List all tag keys for a measurement' },
+    { command: 'SHOW FIELD KEYS FROM <measurement>;', description: 'List all field keys for a measurement' },
+    { command: 'SELECT LAST(<field>) FROM <measurement>;', description: 'Get the last value of a field' }
+];

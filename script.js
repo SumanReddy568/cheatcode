@@ -29,6 +29,21 @@ const technologies = {
     git: 'GIT',
     ansible: 'ANSIBLE',
     terraform: 'TERRAFORM',
+    chief: 'CHIEF',
+    circleci: 'CIRCLE CI',
+    elk: 'ELK',
+    gitlab: 'GIT LAB',
+    grafana: 'GRAFANA',
+    influx: 'INFLUX DB',
+    jenkins: 'JENKINS',
+    mongo: 'MONGO DB',
+    mysql: 'MY SQL',
+    nginx: 'NGINX',
+    openshift: 'OPEN SHIFT',
+    postgres: 'POSTGRES',
+    prometheus: 'PROMETHEUS',
+    puppet: 'PUPPET',
+    redis: 'REDIS',
 };
 
 // Load default (first) technology on page load

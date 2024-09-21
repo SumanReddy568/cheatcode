@@ -1,0 +1,22 @@
+window.redisCommands = [
+    { command: 'redis-cli', description: 'Start Redis interactive command line interface' },
+    { command: 'PING', description: 'Check if the server is running' },
+    { command: 'SET <key> <value>', description: 'Set the value of a key' },
+    { command: 'GET <key>', description: 'Get the value of a key' },
+    { command: 'DEL <key>', description: 'Delete a key' },
+    { command: 'EXISTS <key>', description: 'Check if a key exists' },
+    { command: 'KEYS <pattern>', description: 'Find all keys matching a pattern' },
+    { command: 'FLUSHDB', description: 'Delete all keys in the current database' },
+    { command: 'FLUSHALL', description: 'Delete all keys in all databases' },
+    { command: 'SCAN <cursor>', description: 'Incrementally iterate through keys' },
+    { command: 'HSET <hash> <key> <value>', description: 'Set the value of a field in a hash' },
+    { command: 'HGET <hash> <key>', description: 'Get the value of a field in a hash' },
+    { command: 'LPUSH <list> <value>', description: 'Prepend a value to a list' },
+    { command: 'RPUSH <list> <value>', description: 'Append a value to a list' },
+    { command: 'LRANGE <list> <start> <stop>', description: 'Get a range of elements from a list' },
+    { command: 'SADD <set> <member>', description: 'Add a member to a set' },
+    { command: 'SMEMBERS <set>', description: 'Get all members of a set' },
+    { command: 'SORT <list>', description: 'Sort the elements of a list' },
+    { command: 'CONFIG GET <parameter>', description: 'Get the value of a configuration parameter' },
+    { command: 'EXIT', description: 'Quit Redis CLI' }
+];

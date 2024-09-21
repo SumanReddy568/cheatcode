@@ -1,0 +1,21 @@
+window.postgresCommands = [
+    { command: 'psql', description: 'Start PostgreSQL interactive terminal' },
+    { command: '\\c <database>', description: 'Connect to a specific database' },
+    { command: '\\l', description: 'List all databases' },
+    { command: '\\dt', description: 'List all tables in the current database' },
+    { command: '\\du', description: 'List all roles' },
+    { command: 'CREATE DATABASE <name>;', description: 'Create a new database' },
+    { command: 'DROP DATABASE <name>;', description: 'Delete a database' },
+    { command: 'CREATE USER <name> WITH PASSWORD \'<password>\';', description: 'Create a new user' },
+    { command: 'GRANT ALL PRIVILEGES ON DATABASE <name> TO <user>;', description: 'Grant privileges to a user' },
+    { command: 'SELECT * FROM <table>;', description: 'Query all rows from a table' },
+    { command: 'INSERT INTO <table> (columns) VALUES (values);', description: 'Insert data into a table' },
+    { command: 'UPDATE <table> SET <column>=<value> WHERE <condition>;', description: 'Update existing data' },
+    { command: 'DELETE FROM <table> WHERE <condition>;', description: 'Delete data from a table' },
+    { command: '\\q', description: 'Quit psql' },
+    { command: '\\d+ <table>', description: 'Get detailed information about a table' },
+    { command: 'ALTER USER <user> WITH PASSWORD \'<newpassword>\';', description: 'Change user password' },
+    { command: 'pg_dump <database> > backup.sql', description: 'Create a backup of the database' },
+    { command: 'pg_restore <backup.sql>', description: 'Restore database from a backup' },
+    { command: 'EXPLAIN ANALYZE <query>;', description: 'Analyze query performance' }
+];
