@@ -14,6 +14,9 @@ COPY script.js ./
 COPY commands/ ./commands/
 COPY theme-toggle.js ./ 
 
+# Copy custom nginx configuration for reverse proxy and routing
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Expose port 80
 EXPOSE 80
 
