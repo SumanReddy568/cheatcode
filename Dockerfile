@@ -8,10 +8,14 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Copy the static website files from the current directory to the container
-COPY index.html ./ 
-COPY style.css ./ 
-COPY script.js ./ 
+COPY theme-toggle.js ./
+COPY index.html ./
+COPY style.css ./
+COPY script.js ./
 COPY commands/ ./commands/
+
+# Copy custom Nginx configuration for reverse proxy and routing
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
